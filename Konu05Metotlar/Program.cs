@@ -10,6 +10,18 @@
             ToplamaYap(18, 25);
             int sonuc = ToplamaYap(10, 20, 30);
             Console.WriteLine("Hesaplanmış Fiyat: " + sonuc);
+
+            Console.WriteLine();
+            Console.WriteLine("Mail Adresiniz: ");
+            var email = Console.ReadLine();
+
+            var mailGonderildimi = MailGonder(email);
+            if (mailGonderildimi == true)
+            {
+                Console.WriteLine("Mail başarıyla gönderildi..");
+            }
+            else
+                Console.WriteLine("Mail Gönderilemedi!");
         }
         static void ToplamaYap() // metot tanımlama
         {
@@ -25,6 +37,16 @@
         static int ToplamaYap(int sayi1, int sayi2, int sayi3) // metotlar dışarıdan paramtere alarak çalışabilir.
         {
             return sayi1 + sayi2 + sayi3; // int olan metotlar geriye değer döndürür, return ile değer döndürülür
+        }
+
+        static bool MailGonder(string mailAdresi)
+        {
+            if (!string.IsNullOrWhiteSpace(mailAdresi)) // eğer mailAdresi değişkeninin değeri boş değilse
+            {
+                // burada mail gönderim kodları yazılır.
+                return true; // mail başarıyla gönderilmişse geriye true değerini
+            }
+            return false; // mail gönderimi başarısız olmuşsa geriye false değerini gönder.
         }
     }
 }
