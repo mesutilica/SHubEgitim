@@ -19,6 +19,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu07Donguler", "Konu07Don
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu08SiniflarClasses", "Konu08SiniflarClasses\Konu08SiniflarClasses.csproj", "{A2306C4F-52A7-4B9B-B985-CD549352E542}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu09StructYapilar", "Konu09StructYapilar\Konu09StructYapilar.csproj", "{9721A6E1-59C5-40C1-A9B3-4D3CC69AF787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu10StringSinifi", "Konu10StringSinifi\Konu10StringSinifi.csproj", "{F8685091-E819-42D5-9C98-C33FC0887065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu11Enumlar", "Konu11Enumlar\Konu11Enumlar.csproj", "{8CB42F72-BC41-4D54-A9FF-93AEA9C1196B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konu12KalitimInheritance", "Konu12KalitimInheritance\Konu12KalitimInheritance.csproj", "{9ED36281-8750-41C2-B02A-4AC4907BFBB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +65,22 @@ Global
 		{A2306C4F-52A7-4B9B-B985-CD549352E542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2306C4F-52A7-4B9B-B985-CD549352E542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2306C4F-52A7-4B9B-B985-CD549352E542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9721A6E1-59C5-40C1-A9B3-4D3CC69AF787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9721A6E1-59C5-40C1-A9B3-4D3CC69AF787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9721A6E1-59C5-40C1-A9B3-4D3CC69AF787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9721A6E1-59C5-40C1-A9B3-4D3CC69AF787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8685091-E819-42D5-9C98-C33FC0887065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8685091-E819-42D5-9C98-C33FC0887065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8685091-E819-42D5-9C98-C33FC0887065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8685091-E819-42D5-9C98-C33FC0887065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB42F72-BC41-4D54-A9FF-93AEA9C1196B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB42F72-BC41-4D54-A9FF-93AEA9C1196B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB42F72-BC41-4D54-A9FF-93AEA9C1196B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB42F72-BC41-4D54-A9FF-93AEA9C1196B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED36281-8750-41C2-B02A-4AC4907BFBB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED36281-8750-41C2-B02A-4AC4907BFBB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED36281-8750-41C2-B02A-4AC4907BFBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED36281-8750-41C2-B02A-4AC4907BFBB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

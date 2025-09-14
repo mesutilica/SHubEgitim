@@ -98,6 +98,31 @@
             };
             Console.WriteLine($"Anasayfa Hakkımızda {kategori.KategoriAdi} {kategori2.KategoriAdi} {kategori3.KategoriAdi} İletişim");
             #endregion
+            #region Örnek 5
+            SiniftaMetotKullanimi metotKullanimi = new();
+            var sonuc = metotKullanimi.LoginKontrol("admin", "123456");
+            if (sonuc) // if de bu şekilde kullanırsak sonuc == true yu kontrol eder
+            {
+                Console.WriteLine("Giriş Başarılı!");
+            }
+            else
+                Console.WriteLine("Giriş Başarısız!");
+
+            var toplamasonucu = metotKullanimi.ToplamaYap(10, 8);
+            Console.WriteLine("toplamasonucu: " + toplamasonucu);
+
+            Console.WriteLine("Statik Degisken: " + SiniftaMetotKullanimi.StatikDegisken); // statik değişkeni sınıfınadı.değişkenadı şeklinde direk kullanabiliyoruz
+
+            Console.WriteLine("Dinamik Degisken: " + metotKullanimi.DinamikDegisken);
+            #endregion
+
+            User user = new()
+            {
+                Id = 1, CreateDate = DateTime.Now, Email = "admin@user.co", Password = "123456"
+            };
+            var KullaniciGirisSonuc = user.KullaniciGiris(user.Email, user.Password);
+
+            Console.WriteLine("KullaniciGirisSonuc: " + KullaniciGirisSonuc);
         }
     }
     class Kullanici
