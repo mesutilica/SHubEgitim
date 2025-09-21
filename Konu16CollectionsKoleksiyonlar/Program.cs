@@ -190,6 +190,24 @@ namespace Konu16CollectionsKoleksiyonlar
             Console.WriteLine(kullanicilar.Contains(yeniKullanici));
             kullanicilar.Add(yeniKullanici);
             Console.WriteLine(kullanicilar.Contains(yeniKullanici));
+
+            Console.WriteLine("Kullanıcılar 3:");
+            foreach (var item in kullanicilar)
+            {
+                Console.WriteLine(item.Name + " " + item.Password);
+            }
+
+            kullanicilar.AddRange(users); // AddRange metodu çoklu kayıt eklememizi sağlar
+
+            kullanicilar.Insert(0, yeniKullanici); // Insert metoduyla istediğimiz sıraya ekleme yapabiliriz.
+            Console.WriteLine();
+            Console.WriteLine("Kullanıcılar 4:");
+            foreach (var item in kullanicilar)
+            {
+                Console.WriteLine(item.Name + " " + item.Password);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Listedeki kayıt sayısı : " + kullanicilar.Count); // Count, listedeki kayıt sayısını getirir.
         }
     }
 }
