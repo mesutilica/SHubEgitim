@@ -99,7 +99,16 @@ namespace WindowsFormsAppAdoNetCRUD
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
+            var sonuc = dAL.Delete((int)dgvKategoriler.CurrentRow.Cells[0].Value);
+            if (sonuc > 0)
+            {
+                Yukle();
+                MessageBox.Show("Kayıt Silme Başarılı!");
+            }
+            else
+            {
+                MessageBox.Show("Kayıt Silme Başarısız!");
+            }
         }
     }
 }
