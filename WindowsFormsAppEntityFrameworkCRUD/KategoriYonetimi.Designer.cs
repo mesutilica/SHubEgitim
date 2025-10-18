@@ -70,6 +70,7 @@
             this.btnSil.TabIndex = 8;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -80,6 +81,7 @@
             this.btnGuncelle.TabIndex = 7;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
@@ -89,6 +91,7 @@
             this.btnEkle.TabIndex = 6;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // txtAciklama
             // 
@@ -150,6 +153,7 @@
             this.dgvKategoriler.Name = "dgvKategoriler";
             this.dgvKategoriler.Size = new System.Drawing.Size(497, 438);
             this.dgvKategoriler.TabIndex = 2;
+            this.dgvKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKategoriler_CellClick);
             // 
             // KategoriYonetimi
             // 
@@ -160,7 +164,8 @@
             this.Controls.Add(this.dgvKategoriler);
             this.Name = "KategoriYonetimi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kategori Yönetimi";
+            this.Text = "Kategori Yönetimi Entity Framework";
+            this.Load += new System.EventHandler(this.KategoriYonetimi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategoriler)).EndInit();

@@ -67,8 +67,7 @@ namespace WindowsFormsAppAdoNetCRUD
             catch (Exception)
             {
                 MessageBox.Show("Hata Oluştu!");
-            }
-            
+            }            
         }
 
         private void dgvUrunler_CellClick(object sender, DataGridViewCellEventArgs e)

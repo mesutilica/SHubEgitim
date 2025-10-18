@@ -16,10 +16,17 @@ namespace WindowsFormsAppEntityFrameworkCRUD
         {
             InitializeComponent();
         }
-
+        DatabaseContext context = new DatabaseContext();
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (txtKullaniciAdi.Text == "Admin" && txtSifre.Text == "123")
+            if (string.IsNullOrWhiteSpace(txtKullaniciAdi.Text) || string.IsNullOrWhiteSpace(txtSifre.Text))
+            {
+                MessageBox.Show("Email ve Şifre Boş Geçilemez!");
+                return;
+            }
+            var user = context.Users.FirstOrDefault(u => u.IsActive && u.Email == txtKullaniciAdi.Text && u.Password == txtSifre.Text);
+
+            if (user != null)
             {
                 groupBox1.Visible = false;
                 menuStrip1.Visible = true;
