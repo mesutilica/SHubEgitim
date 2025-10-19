@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Html Eğitimi</title>
+</head>
+<body>
+    Html Eğitimi
+    <br />
+    <br />
+    1 sayfada 1 tane html <br />
+    1 tane head <br />
+    1 tane de body etiketi olmalıdır! <br />
+    Temel Html Elementleri
+    <br />
+    Başlık Elementleri
+    <h1>Bu bir h1 başlığıdır</h1>
+    <h2>Bu bir h2 başlığıdır</h2>
+    <h3>Bu bir h3 başlığıdır</h3>
+    <h4>Bu bir h4 başlığıdır</h4>
+    <h5>Bu bir h5 başlığıdır</h5>
+    <h6>Bu bir h6 başlığıdır</h6>
+    <p>
+        p elementi sayfada paragraf metni oluşturmak için kullanılır.
+    </p>
+    <div>
+        div elementi sayfada ayrı bölümler oluşturmak için kullanılır.
+    </div>
+    <div>
+        her h, div ve p elementi ayrı satırlarda gösterilir, yan yana gösterilmez.
+        Bu elementlere blok seviyesi elementleri denir.
+    </div>
+    <h3>a Elementi ile sayfalar arası bağlantı verme</h3>
+    <a href="https://www.google.com/">google</a>
+    <br />
+    <a href="https://www.google.com/" target="_blank">google ı yeni sekmede aç</a>
+    <br />
+    <a href="olmayansayfa.html">
+        Olmayan sayfa tarayıcı tarafından 404 not found-sayfa bulunamadı hatası döndürür
+    </a>
+    <h3>Sayfada Resim Gösterme</h3>
+    <img src="#" alt="Resim Yok" />
+    <img src="Resimler/google.jpg" title="resim açıklaması" width="200" height="100" />
+
+    <h3>Sayfada Tablo İle Ekran Tasarımı</h3>
+    <p>
+        Bir web sayfasını table tr ve td taglarıyla tasarlayabiliriz.
+        <br>
+        Genelde tablolar veri gösterimi gibi işlemlerde kullanılır.
+    </p>
+
+    <table>
+        <tr>
+            <td>1 table 1 tr 1 td den oluşan tablo</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>1 table 1 tr 1 th den oluşan tablo</th>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td>1 table 1 tr 2 td den oluşan tablo</td>
+            <td>1 table 1 tr 2 td den oluşan tablo</td>
+        </tr>
+    </table>
+    <br />
+    <table border="1">
+        <tr>
+            <td>1 table 2 tr 3 td den oluşan tablo</td>
+            <td>1 table 2 tr 3 td den oluşan tablo</td>
+            <td>1 table 2 tr 3 td den oluşan tablo</td>
+        </tr>
+        <tr>
+            <td>1 table 2 tr 3 td den oluşan tablo</td>
+            <td>1 table 2 tr 3 td den oluşan tablo</td>
+            <td>1 table 2 tr 3 td den oluşan tablo</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <a href="index.html">Anasayfa</a>
+            </td>
+            <td>
+                <a href="hakkimizda.html">Hakkımızda</a>
+            </td>
+            <td>
+                <a href="#">İletişim</a>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Kategori Adı</th>
+            <th>Durum</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Elektronik</td>
+            <td>Aktif</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bilgisayar</td>
+            <td>Pasif</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Telefon</td>
+            <td>Aktif</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <h3>Tablolarda Satır ve Sütunları Birleştirme</h3>
+    <table border="1">
+        <tr>
+            <th rowspan="4">Kategoriler</th>
+            <th colspan="2">Kategori Adı Durum</th>
+        </tr>
+        <tr>
+            <td>Elektronik</td>
+            <td>Aktif</td>
+        </tr>
+        <tr>
+            <td>Bilgisayar</td>
+            <td>Pasif</td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td>Aktif</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <i>i elementi</i>
+    <br />
+    <b>b elementi</b>
+    <br />
+    <strong>strong</strong>
+    <br />
+    <em>em elementi</em>
+    <br />
+    <u>u elementi</u>
+    <br />
+    <mark>mark elementi</mark>
+    <br />
+    <del>del elementi</del>
+    <br />
+    <ins>ins elementi</ins>
+
+    <h2>Başlık içinde <small>small elementi</small> kullanma</h2>
+    <h2>Başlık içinde <sub>sub elementi</sub> kullanma</h2>
+    <h2>Başlık içinde <sup>sup elementi</sup> kullanma</h2>
+
+    <h3>
+        Html Liste Elementleri
+    </h3>
+    <p>
+        Sıralı, sırasız ve açıklamalı olmak üzere 3 farklı liste elementi var.
+    </p>
+
+    <h4>Unordered list - ul - sırasız liste</h4>
+    <ul>
+        <li>Elektronik</li>
+        <li>Bilgisayar</li>
+        <li>Telefon</li>
+    </ul>
+
+    <h4>Ordered List - Sıralı Liste</h4>
+    <ol>
+        <li>Elektronik</li>
+        <li>Bilgisayar</li>
+        <li>Telefon</li>
+    </ol>
+
+    <h4>Açıklamalı Liste</h4>
+    <dl>
+        <dt>Kategori Adı</dt>
+        <dd>Elektronik</dd>
+        <dt>Kategori Açıklaması</dt>
+        <dd>Elektronik ürünleri burada</dd>
+        <dt>Durum</dt>
+        <dd>Aktif</dd>
+    </dl>
+
+    <h3>Html Koduna Yorum Satırı Ekleme</h3>
+    <p>
+        kod editöründe html kodları arasına bir yorum satırı eklemek istersek ilgli metni seçip ctrl+k +c kısayıloyla
+        yorum satırı yapabiliriz.
+        <br>
+        Yorum satırını açmak için ctrl tuşuna basılı tutarken k + u tuşları yorum satırını açar.
+    </p>
+    <!--Burası yorum alanı kod bitişi-->
+    <h3>Fieldset Elementi</h3>
+    <fieldset>
+        <legend>Kullanıcı Girişi</legend>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>Kullanıcı Adı</td>
+                    <td>
+                        <input type="text" name="kullanici_adi" value="" placeholder="Kullanıcı Adı" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Parola</td>
+                    <td>
+                        <input type="password" name="sifre" value="" placeholder="Şifre" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Giriş Yap" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <hr />
+    <form action="/" method="get">
+        <table border="1">
+            <tr>
+                <td>Ürün Adı</td>
+                <td>
+                    <input type="text" name="txturunadi" value="" placeholder="Ürün Adı" />
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Açıklaması</td>
+                <td>
+                    <textarea></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Resmi</td>
+                <td>
+                    <input type="file" name="urunresmi"  />
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Stok</td>
+                <td>
+                    <input type="number" name="stok"  />
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Durum</td>
+                <td>
+                    <input type="checkbox" name="cbDurum"  />
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Rengi</td>
+                <td>
+                    <input type="color" name="cbDurum"  />
+                </td>
+            </tr>
+            <tr>
+                <td>Ürün Üretim Tarihi</td>
+                <td>
+                    <input type="date" name="dtTarih"  />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Kaydet" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

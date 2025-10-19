@@ -47,7 +47,8 @@ namespace WindowsFormsAppEntityFrameworkCRUD
                 Description = txtAciklama.Text,
                 IsActive = cbDurum.Checked,
                 Name = txtUrunAdi.Text,
-                Price = Convert.ToDecimal(txtFiyat.Text)
+                Price = Convert.ToDecimal(txtFiyat.Text),
+                CategoryId = (int)cbKategoriler.SelectedValue
             };
             try
             {
@@ -74,6 +75,7 @@ namespace WindowsFormsAppEntityFrameworkCRUD
             txtUrunAdi.Text = dgvUrunler.CurrentRow.Cells[1].Value.ToString();
             txtAciklama.Text = dgvUrunler.CurrentRow.Cells[2].Value.ToString();
             cbDurum.Checked = (bool)dgvUrunler.CurrentRow.Cells[3].Value;
+            cbKategoriler.SelectedValue = Convert.ToInt32(dgvUrunler.CurrentRow.Cells["CategoryId"].Value);
             txtStok.Text = dgvUrunler.CurrentRow.Cells[5].Value.ToString();
             txtFiyat.Text = dgvUrunler.CurrentRow.Cells[6].Value.ToString();
 
@@ -98,6 +100,7 @@ namespace WindowsFormsAppEntityFrameworkCRUD
             product.Stock = Convert.ToInt32(txtStok.Text);
             product.Price = Convert.ToDecimal(txtFiyat.Text);
             product.IsActive = cbDurum.Checked;
+            product.CategoryId = (int)cbKategoriler.SelectedValue;
 
             try
             {
