@@ -70,7 +70,12 @@
     <Content Include="CssEgitimi\Css-01-giris.html" />
     <Content Include="CssEgitimi\Css-02-arkaplanlar.html" />
     <Content Include="CssEgitimi\Css-03-margin-padding.html" />
-    <Content Include="HtmlPage1.html" />
+    <Content Include="CssEgitimi\Css-04-genislik-yukseklik.html" />
+    <Content Include="CssEgitimi\Css-05-display-ozelligi.html" />
+    <Content Include="CssEgitimi\Css-06-position-ozelligi.html" />
+    <Content Include="CssEgitimi\Css-07-float-ozelligi.html" />
+    <Content Include="HtmlCssPage.html" />
+    <Content Include="HtmlPage.html" />
     <Content Include="index.html" />
     <Content Include="Resimler\bg6.png" />
     <Content Include="Resimler\EvgorLogo1200x300.png" />
