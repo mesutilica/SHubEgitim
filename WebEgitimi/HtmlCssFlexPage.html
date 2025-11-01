@@ -2,24 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Html Web Site Örneği</title>
+    <title>Html Web Site Css Flex Kullanım Örneği</title>
     <style>
-        ul#ustMenu li { display: inline; margin-right: 1rem; }
-        #ustSerit div { float: left; width: 33%; }
-        #ustSerit div:last-child { float: right; }
-        header nav { clear: both; }
+        #ustSerit, ul#ustMenu { display: flex; justify-content: space-between; align-items: center; }
+        ul#ustMenu li { list-style: none; }
         a { color: black; text-decoration: none; }
         a:hover { color: red; }
         header, main, footer { max-width: 1170px; margin: auto; }
-        .urunler div { float: left; margin: 15px 15px 10px 0; }
-        footer > div { float: left; width: 25% }
-        #footer-social-list { margin-top: 1rem; padding:0; }
+        .urunler { display: flex; flex-wrap: wrap; justify-content: space-between; margin:1.8rem 0; }
+        footer { display: flex; justify-content: space-between; }
+        #footer-social-list { margin-top: 1rem; padding: 0; }
         #footer-social-list li { display: inline; margin-right: 10px; }
     </style>
 </head>
 <body>
     <header>
-        <div id="ustSerit" class="row">
+        <div id="ustSerit">
             <div>
                 <form action="" method="get">
                     <input type="search" name="ara" value="" />
@@ -70,98 +68,93 @@
         </nav>
     </header>
     <main>
-        <section>
+        <div class="urunler">
             <div>
-                <div class="urunler">
-                    <div>
-                        <img src="https://www.evgor.com.tr/sirius-luks-yatak-odasi-377928-51-K.webp" alt="Alternate Text" width="358" />
-                        <h3>
-                            <a href="#">Sirius Lüks Yatak Odası</a>
-                        </h3>
-                        <div>
-                            <del>
-                                363.600 TL
-                            </del>
-                            <span>
-                                254.520 TL
-                            </span>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://www.evgor.com.tr/brilliant-krem-klasik-koltuk-takimi-377894-51-K.webp" alt="Alternate Text" width="358" />
-                        <h3>
-                            <a href="#">Brilliant Krem Klasik Koltuk Takımı</a>
-                        </h3>
-                        <div>
-                            <del>
-                                369.600 TL
-                            </del>
-                            <span>
-                                258.520 TL
-                            </span>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://www.evgor.com.tr/brilliant-krem-klasik-yemek-odasi-377790-51-K.webp" alt="Alternate Text" width="358" />
-                        <h3>
-                            <a href="#">Brilliant Krem Klasik Yemek Odası</a>
-                        </h3>
-                        <div>
-                            <del>
-                                373.600 TL
-                            </del>
-                            <span>
-                                258.000 TL
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="urunler">
-                    <div>
-                        <img src="https://www.evgor.com.tr/sirius-luks-yatak-odasi-377928-51-K.webp" alt="Alternate Text" width="358" />
-                        <h3>
-                            <a href="#">Sirius Lüks Yatak Odası</a>
-                        </h3>
-                        <div>
-                            <del>
-                                363.600 TL
-                            </del>
-                            <span>
-                                254.520 TL
-                            </span>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://www.evgor.com.tr/brilliant-krem-klasik-koltuk-takimi-377894-51-K.webp" alt="Alternate Text" width="358" />
-                        <h3>
-                            <a href="#">Brilliant Krem Klasik Koltuk Takımı</a>
-                        </h3>
-                        <div>
-                            <del>
-                                369.600 TL
-                            </del>
-                            <span>
-                                258.520 TL
-                            </span>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://www.evgor.com.tr/brilliant-krem-klasik-yemek-odasi-377790-51-K.webp" alt="Alternate Text" width="358" />
-                        <h3>
-                            <a href="#">Brilliant Krem Klasik Yemek Odası</a>
-                        </h3>
-                        <div>
-                            <del>
-                                373.600 TL
-                            </del>
-                            <span>
-                                258.000 TL
-                            </span>
-                        </div>
-                    </div>
+                <img src="https://www.evgor.com.tr/sirius-luks-yatak-odasi-377928-51-K.webp" alt="Alternate Text" width="358" />
+                <h3>
+                    <a href="#">Sirius Lüks Yatak Odası</a>
+                </h3>
+                <div>
+                    <del>
+                        363.600 TL
+                    </del>
+                    <span>
+                        254.520 TL
+                    </span>
                 </div>
             </div>
-        </section>
+            <div>
+                <img src="https://www.evgor.com.tr/brilliant-krem-klasik-koltuk-takimi-377894-51-K.webp" alt="Alternate Text" width="358" />
+                <h3>
+                    <a href="#">Brilliant Krem Klasik Koltuk Takımı</a>
+                </h3>
+                <div>
+                    <del>
+                        369.600 TL
+                    </del>
+                    <span>
+                        258.520 TL
+                    </span>
+                </div>
+            </div>
+            <div>
+                <img src="https://www.evgor.com.tr/brilliant-krem-klasik-yemek-odasi-377790-51-K.webp" alt="Alternate Text" width="358" />
+                <h3>
+                    <a href="#">Brilliant Krem Klasik Yemek Odası</a>
+                </h3>
+                <div>
+                    <del>
+                        373.600 TL
+                    </del>
+                    <span>
+                        258.000 TL
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://www.evgor.com.tr/sirius-luks-yatak-odasi-377928-51-K.webp" alt="Alternate Text" width="358" />
+                <h3>
+                    <a href="#">Sirius Lüks Yatak Odası</a>
+                </h3>
+                <div>
+                    <del>
+                        363.600 TL
+                    </del>
+                    <span>
+                        254.520 TL
+                    </span>
+                </div>
+            </div>
+            <div>
+                <img src="https://www.evgor.com.tr/brilliant-krem-klasik-koltuk-takimi-377894-51-K.webp" alt="Alternate Text" width="358" />
+                <h3>
+                    <a href="#">Brilliant Krem Klasik Koltuk Takımı</a>
+                </h3>
+                <div>
+                    <del>
+                        369.600 TL
+                    </del>
+                    <span>
+                        258.520 TL
+                    </span>
+                </div>
+            </div>
+            <div>
+                <img src="https://www.evgor.com.tr/brilliant-krem-klasik-yemek-odasi-377790-51-K.webp" alt="Alternate Text" width="358" />
+                <h3>
+                    <a href="#">Brilliant Krem Klasik Yemek Odası</a>
+                </h3>
+                <div>
+                    <del>
+                        373.600 TL
+                    </del>
+                    <span>
+                        258.000 TL
+                    </span>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
 

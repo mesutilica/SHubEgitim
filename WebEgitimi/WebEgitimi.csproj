@@ -74,9 +74,14 @@
     <Content Include="CssEgitimi\Css-05-display-ozelligi.html" />
     <Content Include="CssEgitimi\Css-06-position-ozelligi.html" />
     <Content Include="CssEgitimi\Css-07-float-ozelligi.html" />
+    <Content Include="HtmlCssFlexPage.html" />
     <Content Include="HtmlCssPage.html" />
     <Content Include="HtmlPage.html" />
     <Content Include="index.html" />
+    <Content Include="JavascriptEgitimi\Konu01JavascriptGiris.html" />
+    <Content Include="JavascriptEgitimi\Konu02Operatorler.html" />
+    <Content Include="JavascriptEgitimi\Konu03KararYapilari.html" />
+    <Content Include="JavascriptEgitimi\Konu04Donguler.html" />
     <Content Include="Resimler\bg6.png" />
     <Content Include="Resimler\EvgorLogo1200x300.png" />
     <Content Include="Resimler\google.jpg" />
