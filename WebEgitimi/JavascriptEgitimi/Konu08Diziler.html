@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Konu08 Diziler</title>
+</head>
+<body>
+    <h1>Konu08 Js Diziler</h1>
+    <script>
+        var sayilar = [3, 5, 7, 9]
+        var toplam = 0
+        for (var i in sayilar) {
+            toplam += sayilar[i]
+            document.write("i nin değeri " + i + " sayilar[i] : " + sayilar[i], "<br>")
+        }
+        document.write("toplamın değeri: " + toplam + "<hr>")
+
+        for (var i of sayilar) { // bu döngü c# daki foreach gibi çalışır
+            document.write("i nin değeri " + i, "<br>")
+        }
+
+        document.write("<hr>")
+
+        var arabalar = ["Fiat", "Peugeot", "TOGG"]
+        console.log(arabalar);
+
+        document.write("<h3>Markalar: </h3>")
+        for (var marka of arabalar) {
+            document.write(marka, "<br>")
+        }
+
+        document.write("<hr>")
+
+        arabalar.push("Tesla", "Opel", "Audi") // dizinin sonuna değer ekleme
+        arabalar.unshift("BMW") // dizinin başına değer ekleme
+        arabalar[7] = "Ferrari" // belirtilen indexe ekleme
+        arabalar[0] = "Mercedes" // indexte değer varsa günceller
+        arabalar.splice(2, 0, "Bugatti", "BMW") // başlangıç indexi, silinecek eleman sayısı, eklenecek elemanlar
+
+        console.log(arabalar);
+
+        document.write("<h3>Markalar: </h3>")
+        for (var marka of arabalar) {
+            document.write(marka, "<br>")
+        }
+
+        document.write("<hr>")
+
+        let arac = arabalar[2]
+        document.write("<br><br> Seçilen araç : " + arac)
+        console.log(arac);
+
+        var meyveler = new Array("Elma", "Armut", "Kiraz", "Mandalina", "Portakal");
+
+        console.log(meyveler);
+        meyveler.splice(2, 2) // 2. indexten başla 2 elemanı sil
+        console.log(meyveler);
+
+        for (var i in meyveler) {
+            document.write("<h3> meyve i : " + i + " " + meyveler[i] + "</h3>")
+        }
+        document.write("<h3>listedeki ilk meyve meyveler[0] : " + meyveler[0] + "</h3>")
+        for (var meyve of meyveler) {
+            document.write("<h3>" + meyve.toUpperCase() + "</h3>")
+        }
+    </script>
+</body>
+</html>

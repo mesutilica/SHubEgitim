@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Konu05Fonksiyonlar</title>
+</head>
+<body>
+    <h1>Konu05 Fonksiyonlar</h1>
+    <script>
+        function myfunction(params) {
+            console.log("fonksiyona gönderilen parametre: ", params);
+        }
+        myfunction("fonksiyona gönderilen değer");
+        myfunction(18);
+        myfunction(true);
+
+        // örnek 2
+        function ToplamaYap(sayi1, sayi2) {
+            console.log("Toplam: ", sayi1 + sayi2);
+        }
+        ToplamaYap(10, 8);
+        ToplamaYap(50, 8);
+        ToplamaYap(30, 4);
+
+        console.warn("Geriye değer döndüren fonksiyonlar:");
+        function cikarmaYap(sayi1, sayi2) {
+            return sayi1 - sayi2;
+        }
+        console.log("Toplam: ", cikarmaYap(10, 8));
+        console.log("Toplam: ", cikarmaYap(50, 8));
+        console.log("Toplam: ", cikarmaYap(30, 4));
+
+        console.warn("sayfa arkaplan ve yazı rengi değiştirme:");
+
+        function renkDegistir(arkaplanRengi, yaziRengi) {
+            document.bgColor = arkaplanRengi
+            document.fgColor = yaziRengi
+        }
+        // renkDegistir("red", "white")
+        renkDegistir("black", "white")
+
+        console.warn("Hazır gelen diğer özellikler:");
+        console.log("pencere iç yüksekliği: ", window.innerHeight);
+        console.log("pencere iç genişliği: ", window.innerWidth);
+
+        console.log("pencere dış yüksekliği: ", window.outerHeight);
+        console.log("pencere dış genişliği: ", window.outerWidth);
+    </script>
+</body>
+</html>
