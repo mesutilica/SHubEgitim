@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Konu12-Jquery-Css</title>
+    <style>
+        .baslik { color: red; font-size: larger }
+        .renk { color: crimson }
+        .brd { border: 1px dashed blue; min-height: 1rem; }
+    </style>
+    <script src="../Scripts/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Konu12-Jquery-Css İşlemleri</h1>
+
+    <h3 id="jqilegizle">Bu element jquery ile gizlenecek</h3>
+    <h3 id="jsilegizle">Bu element javascript ile gizlenecek</h3>
+
+    <script>
+        // sayfadaki elementleri gizleme
+        $("#jqilegizle").hide()
+        document.getElementById("jsilegizle").style.display = "none"
+
+        // sayfadaki elementleri gösterme
+        $("#jqilegizle").show()
+        document.getElementById("jsilegizle").style.display = ""
+    </script>
+</body>
+</html>
