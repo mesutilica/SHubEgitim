@@ -78,6 +78,7 @@
     <Content Include="HtmlCssPage.html" />
     <Content Include="HtmlPage.html" />
     <Content Include="index.html" />
+    <Content Include="JavascriptEgitimi\Ajaxicerik.txt" />
     <Content Include="JavascriptEgitimi\Konu01JavascriptGiris.html" />
     <Content Include="JavascriptEgitimi\Konu02Operatorler.html" />
     <Content Include="JavascriptEgitimi\Konu03KararYapilari.html" />
@@ -90,6 +91,10 @@
     <Content Include="JavascriptEgitimi\Konu10-JquerySeciciler.html" />
     <Content Include="JavascriptEgitimi\Konu11-Jquery-Html.html" />
     <Content Include="JavascriptEgitimi\Konu12-Jquery-Css.html" />
+    <Content Include="JavascriptEgitimi\Konu13-Jquery-DOM.html" />
+    <Content Include="JavascriptEgitimi\Konu14-Jquery-efektler.html" />
+    <Content Include="JavascriptEgitimi\Konu15-Jquery-Ajax.html" />
+    <Content Include="JavascriptEgitimi\Konu16-Javascript-Dunyasi.html" />
     <Content Include="jquery-3.7.1.min.js" />
     <Content Include="Resimler\bg6.png" />
     <Content Include="Resimler\EvgorLogo1200x300.png" />

@@ -25,5 +25,35 @@
         $("#jqilegizle").show()
         document.getElementById("jsilegizle").style.display = ""
     </script>
+
+    <hr />
+
+    <h2>Elementlerin Css lerini Değiştirme</h2>
+    <div id="jqsekillendir" class="renk test brd">
+        Elementlerin Css lerini Değiştirme
+    </div>
+    <div id="jssekillendir" class="renk test brd">
+        Elementlerin Css lerini Değiştirme
+    </div>
+    <script>
+        // jquery ile elementlere css uygulama
+        $("#jqsekillendir").css("font-size", "34px")
+        $("#jqsekillendir").css("padding", "34px")
+
+        // jquery ile elementlere class ekleme
+        $("h2:first").addClass("baslik")
+        $("#jqsekillendir").addClass("jsclass deneme") // birden fazla class da ekleyebiliriz
+        $("#jqsekillendir").removeClass("renk")
+
+        // Javascript ile css verme
+        document.getElementById("jssekillendir").style.color = "blue"
+        document.getElementById("jssekillendir").style.padding = "1rem"
+        document.getElementById("jssekillendir").style.margin = "1.8rem"
+
+
+        // Javascript ile elementlere class ekleme çıkarma
+        document.getElementById("jssekillendir").classList.add("baslik")
+        document.getElementById("jssekillendir").classList.remove("test")
+    </script>
 </body>
 </html>
