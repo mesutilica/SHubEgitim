@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ders07FormElementleri</title>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="container">
+        <h1>Ders07 Form Elementleri</h1>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" name="txtKullaniciAdi" value="" placeholder="Kullanıcı Adı" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" name="txtSifre" value="" placeholder="Şifre" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Giriş" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <hr />
+        <h3>Bootstrap Uygulanmış Hali</h3>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" name="txtKullaniciAdi" value="" placeholder="Kullanıcı Adı" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" name="txtSifre" value="" placeholder="Şifre" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Giriş" class="btn btn-primary" />
+                        <input type="submit" value="Kayıt" class="btn btn-secondary">
+                        <input type="submit" value="Kayıt Sil" class="btn btn-danger">
+                        <input type="submit" value="Üye Bilgileri" class="btn btn-info">
+                        <input type="submit" value="Bilgi Güncelle" class="btn btn-success">
+                        <input type="submit" value="Şifre Yenile" class="btn btn-warning">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Giriş" class="btn btn-outline-primary" />
+                        <input type="submit" value="Kayıt" class="btn btn-outline-secondary">
+                        <input type="submit" value="Kayıt Sil" class="btn btn-outline-danger">
+                        <input type="submit" value="Üye Bilgileri" class="btn btn-outline-info">
+                        <input type="submit" value="Bilgi Güncelle" class="btn btn-outline-success">
+                        <input type="submit" value="Şifre Yenile" class="btn btn-outline-warning">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <h3>A Elementinde Buton Classı Kullanımı</h3>
+        <a href="#">Giriş</a>
+        <a href="#" class="btn btn-primary">Giriş</a>
+        <a href="#" class="btn btn-outline-primary">Giriş</a>
+
+        <h3>Ürün Kayıt</h3>
+        <form action="" method="post">
+            <table class="w-50" border="1">
+                <tr>
+                    <td>Ürün Kategorisi</td>
+                    <td>
+                        <select class="form-select">
+                            <option value="-1">Seçiniz</option>
+                            <option value="1">Elektronik</option>
+                            <option value="2">Bilgisayar</option>
+                            <option value="3">Telefon</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Adı</td>
+                    <td>
+                        <input type="text" name="txturunadi" value="" placeholder="Ürün Adı" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Açıklaması</td>
+                    <td>
+                        <textarea class="form-control"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Resmi</td>
+                    <td>
+                        <input type="file" name="urunresmi" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Stok</td>
+                    <td>
+                        <input type="number" name="stok" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Durum</td>
+                    <td>
+                        <input type="checkbox" name="cbDurum" class="form-check-input" />
+                        <label for="cbDurum" class="form-check-label">Aktif</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Rengi</td>
+                    <td>
+                        <input type="color" name="cbDurum" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ürün Üretim Tarihi</td>
+                    <td>
+                        <input type="date" name="dtTarih" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anasayfa</td>
+                    <td>
+                        <input type="radio" name="rbAnasayfa" class="form-check-input" />
+                        <label for="rbAnasayfa" class="form-check-label">Göster</label>
+                        <input type="radio" name="rbAnasayfa" class="form-check-input" />
+                        <label for="rbAnasayfa" class="form-check-label">Gösterme</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Kaydet" class="btn btn-primary" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+</body>
+</html>
