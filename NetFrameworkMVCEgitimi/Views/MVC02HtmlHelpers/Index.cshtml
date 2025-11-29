@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "MVC02 Html Helpers";
+}
+
+<h2>MVC02 Html Helpers</h2>
+
+@Html.ActionLink("Anasayfa", "Index", "Home")
+
+@Html.ActionLink("MVC01 Razor Syntax", "Index", "MVC01RazorSyntax")
+
+<a href="/Home">Anasayfa</a>
+
+<a href="/Home/Index">Anasayfa</a>
+
+<hr />
+
+<h3>
+    Html Checkbox Oluşturma
+</h3>
+
+<label>
+    <input type="checkbox" name="cbOnay" /> Onaylıyorum
+</label>
+
+<br />
+
+<label>
+    @Html.CheckBox("Onay") Onaylıyorum
+</label>
+
+<hr />
+
+<h3>
+    Html TextBox Oluşturma
+</h3>
+
+<input type="text" name="txtAd" value="" />
+
+<br />
+
+@Html.TextBox("txtSoyad")
+
+<h3>
+    Html Editor
+</h3>
+
+<input type="number" name="txtMiktar" value="" />
+
+<br />
+
+@Html.Editor("txtMiktar") Ekranda veri tipine göre otomatik tipi ayarlı giriş(input) elementi oluşturur.
+
+<hr />
+
+<h3>Html Hidden(Gizli Element) Oluşturma</h3>
+
+@Html.Hidden("GizliElement", "Html Hidden(Gizli Element) deki veriler sadece sayfa kaynağında görünür")
+
+Html Hidden(Gizli Element) deki veriler sadece sayfa kaynağında görünür
+
+<hr />
+
+<h3>
+    Html Label Oluşturma
+</h3>
+
+@Html.Label("lblAd", "Html label elementi")
+
+<hr />
+
+<h3>
+    Html Textarea(Çok satırlı input) Oluşturma
+</h3>
+
+@Html.TextArea("txtAdres", "Html Textarea(Çok satırlı input) Oluşturma")
+
+<hr />
+
+<h3>Html Password(Şifre alanı) Oluşturma</h3>
+
+@Html.Password("txtPassword")
+
+<hr />
+
+<h3>Html Helpers ile Form Oluşturma</h3>
+
+@using (Html.BeginForm())
+{
+    <h5>Kullanıcı Adı</h5>
+    @Html.Editor("txtKullaniciAdi")
+    <h5>Şifre</h5>
+    @Html.Password("txtPassword")
+    <br />
+    <input type="submit" value="Giriş" />
+}
+
+<hr />
+
+<h3>Listbox ve DropDownList Elementi Kullanımı</h3>
+
+@{
+    var liste = new SelectListItem[]{
+                new SelectListItem() { Text = "Bilgisayar"},
+                new SelectListItem() { Text = "Elektronik"},
+                new SelectListItem() { Text = "Telefon"}
+                    };
+}
+
+@Html.ListBox("lbListe", liste)
+<br />
+@Html.DropDownList("ddlListe", liste)
+
+<hr />
+
+<h3>RadioButton Elementi Kullanımı</h3>
+
+<h5>Sözleşmeyi</h5>
+
+<label>
+    @Html.RadioButton("rbOnay", "Onay")  Onaylıyorum
+</label>
+
+<label>
+    @Html.RadioButton("rbOnay", "Red")  Onaylamıyorum
+</label>
+
+<hr />
+
+<h3>Html Raw ile Ekrana Html içerik yazdırma</h3>
+
+@{string htmlRawOrnek = "<h3>Html Raw ile Ekrana Html içerik yazdırma</h3>";}
+
+@htmlRawOrnek
+
+@Html.Raw(htmlRawOrnek)

@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "MVC03 Data Transfer";
+}
+
+<h2>MVC03 Data Transfer</h2>
+
+<h3>
+    @ViewBag.UrunKategorisi Ürünleri
+</h3>
+
+<table class="table">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewBag.Urunler)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>@TempData["UrunBilgi"]</caption>
+</table>
+
+<hr />
+
+<table class="table table-striped">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in ViewData["Urunler"] as List<NetFrameworkMVCEgitimi.Models.Urun>)
+    {
+        <tr>
+            <td>@item.Adi</td>
+            <td>@item.Fiyati</td>
+            <td>@item.Stok</td>
+        </tr>
+    }
+    <caption>@TempData["UrunBilgi"]</caption>
+</table>
+
+<hr />
+
+<h2>MVC de View dan Controller a Veri Gönderme</h2>
+
+<h3>
+    1-Get Metoduyla Veri Gönderme
+</h3>
+
+<form action="/MVC03DataTransfer/Search" method="get">
+    <input type="text" name="txtAra" value="" />
+</form>
+
+<p>
+    Bir formun metodunu get yapıp çalıştırırsak, form içindeki veriler QueryString denilen yöntemle Tarayıcı adres çubuğu üzerinden sunucuya gönderilir.
+    <hr />
+    Veriyi Viewdan GET metoduyla göndermişsek, Controller'da da GET metoduyla yakalayabiliriz!
+</p>
+
+<h3>
+    2-Post Metoduyla Veri Gönderme
+</h3>
+
+@{
+    var kategoriler = new List<SelectListItem>
+{
+        new SelectListItem() { Text = "Bilgisayar", Value = "1" },
+        new SelectListItem() { Text = "Monitör" },
+        new SelectListItem() { Text = "Telefon", Value = "3" },
+        new SelectListItem() { Text = "Televizyon" },
+        new SelectListItem() { Text = "Tablet", Value = "5" }
+    };
+}
+
+<form action="" method="post">
+    <table class="table">
+        <tr>
+            <td>Ürün Adı</td>
+            <td>@Html.TextBox("txtUrunAdi")</td>
+        </tr>
+        <tr>
+            <td>Kategori</td>
+            <td>@Html.DropDownList("ddlKategori", kategoriler)</td>
+        </tr>
+        <tr>
+            <td>Sözleşme</td>
+            <td>
+                <label>
+                    @Html.RadioButton("rbOnay", "onay") Kabul Ediyorum
+                </label>
+                <label>
+                    @Html.RadioButton("rbOnay", "red") Kabul Etmiyorum
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Durum</td>
+            <td>@Html.CheckBox("cbOnay") <label for="cbOnay">Aktif</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Gönder" /></td>
+        </tr>
+    </table>
+</form>
+
+<hr />
+
+<div class="alert alert-info">
+    <h4>@ViewBag.Baslik1</h4>
+    @ViewBag.Mesaj1
+    <hr />
+    @ViewBag.Mesaj2
+    <hr />
+    @ViewBag.Mesaj3
+</div>
+
+<hr />
+
+<div class="alert alert-warning">
+    <h4>@ViewBag.Baslik2</h4>
+    @ViewBag.Mesaj4
+    <hr />
+    @ViewBag.Mesaj5
+    <hr />
+    @ViewBag.Mesaj6
+</div>
+
+<hr />
+
+<div class="alert alert-primary">
+    <h4>@ViewBag.Baslik3</h4>
+    @ViewBag.Mesaj7
+    <hr />
+    @ViewBag.Mesaj8
+    <hr />
+    @ViewBag.Mesaj9
+</div>
