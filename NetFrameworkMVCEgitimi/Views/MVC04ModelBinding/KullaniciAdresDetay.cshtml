@@ -1,0 +1,46 @@
+﻿@model NetFrameworkMVCEgitimi.Models.UyeSayfasiViewModel
+@{
+    ViewBag.Title = "Kullanici Adres Detay";
+}
+
+<h2>Kullanici Adres Detay</h2>
+
+<table class="table">
+    <tr>
+        <td>Ad</td>
+        <td>@Model.Kullanici.Ad</td>
+    </tr>
+    <tr>
+        <td>Soyad</td>
+        <td>@Model.Kullanici.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Kullanici.Email</td>
+    </tr>
+    <tr>
+        <td>Kullanıcı Adı</td>
+        <td>@Model.Kullanici.KullaniciAdi</td>
+    </tr>
+    <tr>
+        <td>Şifre</td>
+        <td>@Model.Kullanici.Sifre</td>
+    </tr>
+</table>
+
+<h3>Kullanıcı Adres Bilgisi</h3>
+
+<table class="table">
+    <tr>
+        <td>Şehir</td>
+        <td>@Model.Adres.Sehir</td>
+    </tr>
+    <tr>
+        <td>İlçe</td>
+        <td>@Model.Adres.Ilce</td>
+    </tr>
+    <tr>
+        <td>Acik Adres</td>
+        <td>@Model.Adres.AcikAdres</td>
+    </tr>
+</table>

@@ -1,0 +1,50 @@
+﻿@model NetFrameworkMVCEgitimi.Models.Adres
+@{
+    ViewBag.Title = "Adres Detay";
+}
+
+<h2>Adres Detay</h2>
+
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <td>Şehir</td>
+            <td>@Model.Sehir</td>
+        </tr>
+        <tr>
+            <td>İlçe</td>
+            <td>@Model.Ilce</td>
+        </tr>
+        <tr>
+            <td>Acik Adres</td>
+            <td>@Model.AcikAdres</td>
+        </tr>
+    </table>
+}
+
+<h3>Adres Düzenle</h3>
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <td>Şehir</td>
+            <td>@Html.EditorFor(m => m.Sehir)</td>
+        </tr>
+        <tr>
+            <td>İlçe</td>
+            <td>@Html.EditorFor(m => m.Ilce)</td>
+        </tr>
+        <tr>
+            <td>Acik Adres</td>
+            <td>@Html.TextAreaFor(m => m.AcikAdres)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+}
