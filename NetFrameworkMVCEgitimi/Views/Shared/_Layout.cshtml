@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("OzelCss", required: false)
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
@@ -30,8 +31,12 @@
                         <a href="/MVC05ModelValidation" class="nav-link">ModelValidation</a>
                     </li>
                     <li>
-                        <a href="/MVC06CRUD" class="nav-link">MVC06CRUD</a>
+                        <a href="/MVC06CRUD" class="nav-link">CRUD</a>
                     </li>
+                    <li>
+                        <a href="/MVC07Section" class="nav-link">Section</a>
+                    </li>
+                    @Html.Partial("_PartialMenu")
                 </ul>
             </div>
         </div>
@@ -39,6 +44,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        @RenderSection("OzelIcerik", required: false)
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>

@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Mvc View Result Çeşitleri";
+}
+
+<h2>Mvc View Result Çeşitleri</h2>
+
+<h4>Farklı View Döndürme</h4>
+
+<a href="/MVC09ViewResults/FarkliViewDondur">Farkli View Dondur</a>
+
+<h3>
+    Redirect Result : Sayfayı bir url adresine yönlendirme için kullanılır
+</h3>
+
+<a href="/MVC09ViewResults/Yonlendir">Redirect Result</a>
+
+<h3>
+    RedirectToAction Result : Sayfayı bir actiona yönlendirme için kullanılır
+</h3>
+
+<a href="/MVC09ViewResults/ActionaYonlendir">RedirectToAction Result</a>
+
+<h3>
+    RedirectToRoute Result : Sayfayı bir route a yönlendirme için kullanılır
+</h3>
+
+<a href="/MVC09ViewResults/RouteYonlendir">RedirectToRoute Result</a>
+
+<h3>
+    PartialViewResult : Geriye bir PartialView döndürmek için kullanılır
+</h3>
+
+<a href="/MVC09ViewResults/KategorileriGetirPartial">RedirectToRoute Result</a>
+
+@Html.Action("KategorileriGetirPartial")
+
+<h3>Partialda Model Kullanimi</h3>
+
+@Html.Action("PartialdaModelKullanimi")
+
+<h3>JavaScript Result</h3>
+
+<a href="/MVC09ViewResults/JsResult">JsResult</a>
+
+<script src="/MVC09ViewResults/JsResult"></script>
+
+<h3>Json Result</h3>
+
+<a href="/MVC09ViewResults/JsonResult">JsonResult</a>
+
+<h3>ContentResult Result</h3>
+
+<a href="/MVC09ViewResults/XmlContentResult">ContentResult</a>
