@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Session Oku";
+}
+
+<h2>Session Oku</h2>
+
+<h3>Session daki kullanıcı adı :</h3>
+<h5>
+    Frontend: @Session["username"]
+</h5>
+<h5>
+    Backend: @TempData["kullaniciAdi"]
+</h5>
+
+<hr />
+
+<h3>Session daki kullanıcı guid :</h3>
+<h5>
+    Frontend: @Session["userguid"]
+</h5>
+<h5>
+    Backend: @TempData["kullaniciguid"]
+</h5>
+
+<a href="SessionSil">Session Sil</a>
+
+<hr />
+
+@{
+    var uye = Session["kullanici"] as NetFrameworkMVCEgitimi.Models.Uye;
+}
+
+@if (uye != null)
+{
+    <h3>Hoşgeldin : @uye.KullaniciAdi</h3>
+
+    <h3>Kullanıcı Bilgileriniz</h3>
+    <table class="table">
+        <tr>
+            <td>Ad Soyad</td>
+            <td>@uye.Ad @uye.Soyad</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@uye.Email</td>
+        </tr>
+        <tr>
+            <td>TC Kimlik No</td>
+            <td>@uye.TcKimlikNo</td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td>@uye.Telefon</td>
+        </tr>
+        <tr>
+            <td>Doğum Tarihi</td>
+            <td>@uye.DogumTarihi.ToShortDateString()</td>
+        </tr>
+    </table>
+}

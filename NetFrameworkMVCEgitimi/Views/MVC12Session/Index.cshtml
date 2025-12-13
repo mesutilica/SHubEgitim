@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Mvc Session Kullanımı";
+}
+
+<h2>Mvc Session Kullanımı</h2>
+
+<p>
+    Sessionlar sunucu taraflı oturum işlemleri veya veri taşıma yöntemi olarak sayfalar arasında güvenli bir şekilde kullanabileceğimiz nesnelerdir.
+</p>
+
+<h3>Session Oluştur</h3>
+
+<form action="/MVC12Session/SessionOlustur" method="post">
+    <input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı" required />
+    <input type="password" name="sifre" placeholder="Şifre" required />
+    <input type="submit" value="Giriş" />
+</form>
+
+<br />
+
+@Html.Raw(TempData["Mesaj"])
+
+<a href="/MVC12Session/SessionOku">Session Oku</a>

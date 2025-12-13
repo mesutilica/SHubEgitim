@@ -130,6 +130,11 @@
     <Compile Include="Controllers\MVC09ViewResultsController.cs" />
     <Compile Include="Controllers\MVC10FileUploadController.cs" />
     <Compile Include="Controllers\MVC11CookieController.cs" />
+    <Compile Include="Controllers\MVC12SessionController.cs" />
+    <Compile Include="Controllers\MVC13StringFormatController.cs" />
+    <Compile Include="Controllers\MVC14AppSettingController.cs" />
+    <Compile Include="Controllers\MVC15FiltersUsingController.cs" />
+    <Compile Include="Filters\UserControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -222,6 +227,14 @@
     <Content Include="Views\MVC10FileUpload\Index.cshtml" />
     <Content Include="Views\MVC11Cookie\Index.cshtml" />
     <Content Include="Views\MVC11Cookie\CookieOku.cshtml" />
+    <Content Include="Views\MVC12Session\Index.cshtml" />
+    <Content Include="Views\MVC12Session\SessionOku.cshtml" />
+    <Content Include="Views\MVC13StringFormat\Index.cshtml" />
+    <Content Include="Views\MVC14AppSetting\Index.cshtml" />
+    <Content Include="Views\MVC15FiltersUsing\Index.cshtml" />
+    <Content Include="Views\MVC15FiltersUsing\UyelikBilgilerim.cshtml" />
+    <Content Include="Views\MVC15FiltersUsing\UyeGuncelle.cshtml" />
+    <Content Include="Views\MVC15FiltersUsing\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

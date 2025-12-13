@@ -5,3 +5,24 @@
 
 <h2>Cookie Oku</h2>
 
+<h3>Cookie deki kullanıcı adı :</h3>
+<h5>
+    Frontend: @Context.Request.Cookies["username"].Value
+</h5>
+<h5>
+    Backend: @TempData["kullaniciAdi"]
+</h5>
+
+<hr />
+
+<h3>Cookie deki kullanıcı guid :</h3>
+<h5>
+    Frontend: @Context.Request.Cookies["userguid"].Value
+</h5>
+<h5>
+    Backend: @TempData["kullaniciguid"]
+</h5>
+
+<hr />
+
+<a href="CookieSil">Cookie Sil</a>

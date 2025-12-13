@@ -36,7 +36,26 @@ namespace NetFrameworkMVCEgitimi.Controllers
         }
         public ActionResult CookieOku()
         {
+            if (HttpContext.Request.Cookies["username"] == null || HttpContext.Request.Cookies["userguid"] == null)
+            {
+                TempData["Mesaj"] = @"<div class='alert alert-danger'>Lütfen Giriş Yapınız!</div>";
+                return RedirectToAction("Index");
+            }
+            TempData["kullaniciAdi"] = HttpContext.Request.Cookies["username"].Value;
+            TempData["kullaniciguid"] = HttpContext.Request.Cookies["userguid"].Value;
             return View();
+        }
+        public ActionResult CookieSil()
+        {
+            if (HttpContext.Request.Cookies["username"] != null)
+            {
+                HttpContext.Response.Cookies["username"].Expires = DateTime.Now.AddSeconds(-1);
+            }
+            if (HttpContext.Request.Cookies["userguid"] != null)
+            {
+                HttpContext.Response.Cookies["userguid"].Expires = DateTime.Now.AddSeconds(-1);
+            }
+            return RedirectToAction("CookieOku");
         }
     }
 }
