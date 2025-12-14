@@ -118,6 +118,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UyelerController.cs" />
+    <Compile Include="Areas\Blog\BlogAreaRegistration.cs" />
+    <Compile Include="Areas\Blog\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MVC01RazorSyntaxController.cs" />
     <Compile Include="Controllers\MVC02HtmlHelpersController.cs" />
@@ -134,6 +139,8 @@
     <Compile Include="Controllers\MVC13StringFormatController.cs" />
     <Compile Include="Controllers\MVC14AppSettingController.cs" />
     <Compile Include="Controllers\MVC15FiltersUsingController.cs" />
+    <Compile Include="Controllers\MVC16HttpContextController.cs" />
+    <Compile Include="Controllers\MVC17AreasController.cs" />
     <Compile Include="Filters\UserControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,6 +186,20 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\SolMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Uyeler\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Uyeler\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Uyeler\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Uyeler\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Uyeler\Edit.cshtml" />
+    <Content Include="Areas\Blog\Views\web.config" />
+    <Content Include="Areas\Blog\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Blog\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Blog\Views\Default\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -235,9 +256,13 @@
     <Content Include="Views\MVC15FiltersUsing\UyelikBilgilerim.cshtml" />
     <Content Include="Views\MVC15FiltersUsing\UyeGuncelle.cshtml" />
     <Content Include="Views\MVC15FiltersUsing\Login.cshtml" />
+    <Content Include="Views\MVC16HttpContext\Index.cshtml" />
+    <Content Include="Views\MVC17Areas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Blog\Data\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

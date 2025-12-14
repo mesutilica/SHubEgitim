@@ -2,12 +2,13 @@
 using System.Linq;
 using System.Web.Mvc;
 
-namespace NetFrameworkMVCEgitimi.Controllers
+namespace NetFrameworkMVCEgitimi.Areas.Admin.Controllers
 {
-    public class MVC06CRUDController : Controller
+    [Authorize] // bu controllerdaki tüm action ları korumaya al ve oturum açılmadan kullanılmasını engelle.
+    public class UyelerController : Controller
     {
         private UyeContext db = new UyeContext();
-        // GET: MVC06CRUD
+        // GET: Admin/Uyeler
         public ActionResult Index()
         {
             return View(db.Uyeler.ToList());

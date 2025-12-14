@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace NetFrameworkMVCEgitimi.Controllers
+{
+    public class MVC16HttpContextController : Controller
+    {
+        // GET: MVC16HttpContext
+        public ActionResult Index()
+        {
+            var mesaj = "RouteData controller : " + RouteData.Values["controller"];
+            mesaj += "<hr/>Action : " + RouteData.Values["action"];
+            mesaj += "<hr/>Id : " + RouteData.Values["id"];
+            mesaj += "<br />HttpContext.Request.Url : " + HttpContext.Request.Url;
+            mesaj += "<hr/>QueryString Kelime : " + HttpContext.Request.QueryString["kelime"];
+            TempData["mesaj"] = mesaj;
+            return View();
+        }
+    }
+}
