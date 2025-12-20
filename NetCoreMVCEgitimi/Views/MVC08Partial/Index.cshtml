@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Uye>
+@{
+    ViewBag.Title = "MVC Partial Kullanımı";
+}
+
+<h2>MVC Partial Kullanımı</h2>
+
+<p>
+    Partial parça anlamına gelir ve kod sayısı fazlalaşan ve karmaşıklaşan uygulamalarda sayfalarımızı parçalara ayırarak yönetmemizi kolaylaştırır.
+</p>
+
+<ul>
+    @Html.Partial("_PartialMenu")
+</ul>
+
+<h3>Partial Model Kullanımı</h3>
+
+@Html.Partial("_PartialModelKullanimi")
+
+<p>
+    Datayı yolladığımızda Mvc otomatik model bindingile modeli aktarıyor
+</p>
+
+<h3>RenderPartial</h3>
+@{
+    Html.RenderPartial("_PartialModelKullanimi", Model);
+}
+
+<h3>Partial Tag Helper Kullanımı</h3>
+
+<ul class="navbar-nav">
+    <partial name="_PartialMenu" />
+</ul>
+
+<h3>Partialda Model Kullanımı</h3>
+
+<partial name="_PartialModelKullanimi" />
+
+<h3>PartialAsync Kullanımı</h3>
+
+<ul class="navbar-nav">
+    @await Html.PartialAsync("_PartialMenu")
+</ul>
+
+<h3>Partialin Asenkron Çağrılması</h3>
+
+@await Html.PartialAsync("_PartialModelKullanimi", Model)
+
+<h3>RenderPartialAsync</h3>
+@{
+    await Html.RenderPartialAsync("_PartialModelKullanimi", Model);
+}

@@ -16,7 +16,7 @@ namespace NetCoreMVCEgitimi.Controllers
         // GET: MVC06CRUDController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(db.Uyeler.Find(id));
         }
 
         // GET: MVC06CRUDController/Create
@@ -28,57 +28,57 @@ namespace NetCoreMVCEgitimi.Controllers
         // POST: MVC06CRUDController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Uye uye)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                db.Uyeler.Add(uye);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(uye);
         }
 
         // GET: MVC06CRUDController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(db.Uyeler.Find(id));
         }
 
         // POST: MVC06CRUDController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Uye uye)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                db.Entry(uye).State = Microsoft.EntityFrameworkCore.EntityState.Modified; // ekrandan gelen uye nesnesinin ef deki kayıt durumunu güncellenecek olarak işaretle
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(uye);
         }
 
         // GET: MVC06CRUDController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(db.Uyeler.Find(id));
         }
 
         // POST: MVC06CRUDController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Uye uye)
         {
             try
             {
+                db.Uyeler.Remove(uye);
+                db.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return View(uye);
             }
         }
     }

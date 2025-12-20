@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO; // dosya yükleme kütüphanesi
-using System.Web;
-using System.Web.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.IO;
 
-namespace NetFrameworkMVCEgitimi.Controllers
+namespace NetCoreMVCEgitimi.Controllers
 {
     public class MVC10FileUploadController : Controller
     {
-        // GET: MVC10FileUpload
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase dosya)// Ön yüzde file upload elementine name olarak ne isim verdiysek onu kullanmalıyız
+        public IActionResult Index(IFormFile? dosya)// Mvc de dosya yükleme IFormFile interface i ile yapılıyor. Burada dosya isminin ekrandaki file upload name i ile aynı olması gerekir yoksa dosya yüklenmez!
         {
             if (dosya != null)
             {
-                // Dosya işlemleri için system.ıo kütüphanesini using ile yukarıya eklemeliyiz!
-                var uzanti = Path.GetExtension(dosya.FileName); // Dosya uzantı kontrolü yapmak istersek
-                var klasor = Server.MapPath("/Images"); // Resmi yükleyeceğimiz klasör(Eğer projede bu klasör yoksa oluşturmalıyız yoksa hata verir!)
+                var uzanti = Path.GetExtension(dosya.FileName);
+                var klasor = Directory.GetCurrentDirectory() + "/wwwroot/Images/"; // resmin yükleneceği klasör
                 var klasorVarmi = Directory.Exists(klasor); // sunucuda bu klasör var mı?
                 TempData["Message"] = "klasorVarmi : " + klasorVarmi;
                 if (klasorVarmi == false) // eğer sunucuda bu konumda klasör yoksa
@@ -31,24 +26,26 @@ namespace NetFrameworkMVCEgitimi.Controllers
                 if (uzanti == ".jpg" || uzanti == ".jpeg" || uzanti == ".png" || uzanti == ".gif") // Sadece bu uzantılardaki dosyaları kabul et
                 {
                     // 1. Yöntem Random(Rastgele) İsimle Dosya Yükleme
-                    /*var randomFileName = Path.GetRandomFileName(); // rasgele dosya ismi oluşturma metodu
+                    /*
+                    var randomFileName = Path.GetRandomFileName(); // rasgele dosya ismi oluşturma metodu
                     var fileName = Path.ChangeExtension(randomFileName, ".jpg"); // dosya adı ve uzantısını değiştirip birleştirdik
                     var path = Path.Combine(klasor, fileName); // klasör ve resim adını birleştirdik
-                    dosya.SaveAs(path); // resmi farklı kaydet metoduyla sunucuya yüklüyoruz.
+                    using var stream = new FileStream(path, FileMode.Create); // resmi farklı kaydet metoduyla sunucuya yüklüyoruz.
+                    
+                    dosya.CopyTo(stream); // resmi sunucuya yükle
                     TempData["Resim"] = fileName;
                     */
-
                     // 2. Yöntem - Resmi Kendi Adıyla Yükleme
                     /*
                     var dosyaAdi = Path.GetFileName(dosya.FileName);
                     var yol = Path.Combine(klasor, dosyaAdi);
-                    dosya.SaveAs(yol);
+                    using var stream = new FileStream(yol, FileMode.Create);
+                    dosya.CopyTo(stream); // resmi sunucuya yükle
                     TempData["Resim"] = dosyaAdi; // yüklenen dosya adı
                     */
-
-                    // 3. Yönetm - Resmi direk sunucuya yollama
-                    dosya.SaveAs(Server.MapPath("/Images/" + dosya.FileName));
-
+                    // 3. yöntem, resmi direk sunucuya yollama
+                    using var stream = new FileStream(klasor + dosya.FileName, FileMode.Create);
+                    dosya.CopyTo(stream);
                     TempData["Resim"] = dosya.FileName;
                 }
                 else

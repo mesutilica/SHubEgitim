@@ -1,14 +1,12 @@
-﻿using NetFrameworkMVCEgitimi.Models;
-using System.Linq;
-using System.Web.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using NetCoreMVCEgitimi.Models;
 
-namespace NetFrameworkMVCEgitimi.Controllers
+namespace NetCoreMVCEgitimi.Controllers
 {
     public class MVC09ViewResultsController : Controller
     {
-        // GET: MVC09ViewResults
         private UyeContext db = new UyeContext();
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
@@ -32,7 +30,7 @@ namespace NetFrameworkMVCEgitimi.Controllers
         public RedirectToRouteResult RouteYonlendir()
         {
             // Bir action içerisinde bir Route a yönlendirme yapabiliriz
-            return RedirectToRoute("Default", new {controller = "Home", action = "Index", id = 18});
+            return RedirectToRoute("Default", new { controller = "Home", action = "Index", id = 18 });
         }
         public PartialViewResult KategorileriGetirPartial()
         {
@@ -43,14 +41,14 @@ namespace NetFrameworkMVCEgitimi.Controllers
             var kullanicilar = db.Uyeler.ToList();
             return PartialView("_PartialModelKullanimi", kullanicilar);
         }
-        public ActionResult JsResult()
-        {
-            return JavaScript("console.warn('JavaScript result')");
-        }
+        //public ActionResult JsResult()
+        //{
+        //    return JavaScript("console.warn('JavaScript result')"); // .net core da yok
+        //}
         public ActionResult JsonResult()
         {
             var kullanicilar = db.Uyeler.ToList();
-            return Json(kullanicilar, JsonRequestBehavior.AllowGet);
+            return Json(kullanicilar);
         }
         public ContentResult XmlContentResult()
         {

@@ -1,11 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace NetFrameworkMVCEgitimi.Controllers
+namespace NetCoreMVCEgitimi.Controllers
 {
     public class MVC13StringFormatController : Controller
     {
-        // GET: MVC13StringFormat
-        public ActionResult Index()
+        public IActionResult Index()
         {
             ViewBag.MusteriNo = string.Format("M{0:D6}", 1);
             ViewBag.SaticiNo = string.Format("S{0:D6}", 218);

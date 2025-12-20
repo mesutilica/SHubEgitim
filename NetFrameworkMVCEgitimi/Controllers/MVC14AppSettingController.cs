@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Configuration; // bu
+﻿using System.Web.Configuration; // bu
 using System.Web.Mvc;
 
 namespace NetFrameworkMVCEgitimi.Controllers

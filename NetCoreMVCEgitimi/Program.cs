@@ -1,4 +1,6 @@
 using NetCoreMVCEgitimi.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 
 namespace NetCoreMVCEgitimi
 {
@@ -11,6 +13,11 @@ namespace NetCoreMVCEgitimi
             // Add services to the container.
             builder.Services.AddControllersWithViews();// Uygulamada MVC controller view yapýsýný kullanacaðýz
             builder.Services.AddDbContext<UyeContext>(); // UyeContext ile crud iþlemleri yapmak için
+            builder.Services.AddSession(); // session kullanabilmek için gerekli session servisini ekle
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
+            {
+                x.LoginPath = "/MVC15FiltersUsing/Login";
+            });
 
             var app = builder.Build();
 
@@ -24,6 +31,8 @@ namespace NetCoreMVCEgitimi
 
             app.UseHttpsRedirection(); // http den https ye otomatik yönlendire yap
             app.UseRouting();// Uygulamada Routing mekanizmasýný aktif et
+
+            app.UseSession(); // uygulamada session kullanýlabilsin
 
             app.UseAuthorization();// Uygulamada yetkilendirme kullanýmýný aktif et
 
