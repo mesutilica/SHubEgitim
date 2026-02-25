@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "View Component Kullanımı";
+}
+
+<h1>View Component Kullanımı</h1>
+
+<p>
+    Asp.Net Mvc de her hangi bir controller a bağlı olmadan kendi kendine çalışabilen modüler yapılara view component denir.
+</p>
+
+<h3>
+    Kullanımı
+</h3>
+
+<p>
+    Projeye ViewComponents klasörü ekleyip içerisine class ımızı ekleyip ViewComponent sınıfından miras alıyoruz.
+</p>
+
+<p>
+    /Views/MVC18ViewComponentUsing/Components/Uyeler/Default.cshtml
+    <br />
+    /Views/Shared/Components/Uyeler/Default.cshtml
+    <br />
+    Yukardaki konumlardan birine ilgili sayfayı oluşturuyoruz.
+</p>
+
+<h3>
+    Komponenti Çağırma
+</h3>
+
+<p>
+    <code>await ile Component.InvokeAsync("Uyeler")</code> metodunu çağırıp parametre olarak çalıştıracağımızkomponent ismini gönderiyoruz.
+</p>
+
+@await Component.InvokeAsync("Uyeler")

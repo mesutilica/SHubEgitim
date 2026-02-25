@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "MVC Http Context";
+}
+
+<h2>MVC Http Context</h2>
+
+<p>
+    Mvc de controller veya view larda uygulumanın yapılan isteklerdeki controller, action, id, query string vb gibi bilgilere erişip işlememizi sağlayan yapı HttpContext dir.
+</p>
+
+<h3>
+    Controller RouteData Values
+</h3>
+
+<p>
+    @Html.Raw(TempData["mesaj"])
+</p>
+
+<form action="">
+    @Html.Editor("kelime")
+</form>
+
+<h4>Post</h4>
+<form action="" method="post">
+    @Html.Editor("kelime")
+</form>
+
+<h5>Controller Adı :</h5>
+@ViewContext.RouteData.Values["controller"]
+
+<h5>Action Adı :</h5>
+@ViewContext.RouteData.Values["action"]
+
+<h5>Id Değeri :</h5>
+@ViewContext.RouteData.Values["id"]
+
+<h5>Request Method :</h5>
+@Context.Request.Method
+
+<h5>Request Scheme :</h5>
+@Context.Request.Scheme
+
+<h5>QueryString :</h5>
+@Context.Request.QueryString
+
+<h5>Query kelime:</h5>
+@Context.Request.Query["kelime"]
+
+<h5>Session değeri :</h5>
+@Context.Session.GetString("UserGuid")
+
+<h5>Cookie değeri :</h5>
+@if (Context.Request.Cookies["userguid"] != null)
+{
+    @Context.Request.Cookies["userguid"]
+}
+
+<h5>Oturum açılmış mı? :</h5>
+@Context.User.Identity.IsAuthenticated
+
+<h5>Kullanıcı User Rolüne Sahip mi? :</h5>
+@Context.User.IsInRole("User")
+
+<h5>Context Session Id</h5>
+@Context.Session.Id
+
+<hr />
+
+<h3>Ekstra Metotlar</h3>
+<p>
+    Controller Adı :
+    @Context.GetRouteValue("Controller")
+    <br />Action Adı :
+    @Context.GetRouteValue("Action")
+    <br />Id Değeri :
+    @Context.GetRouteValue("id")
+</p>

@@ -37,6 +37,12 @@ namespace NetCoreMVCEgitimi
             app.UseAuthorization();// Uygulamada yetkilendirme kullanýmýný aktif et
 
             app.MapStaticAssets();// Uygulamada statik doyalar(wwwroot içerisindekiler) kullanýlabilsin
+
+            app.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Main}/{action=Index}/{id?}"
+            );
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
